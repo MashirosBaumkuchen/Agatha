@@ -11,23 +11,25 @@ import com.jascal.kernel.config.Config;
  * @email jascal@163.com
  */
 public class LogUtils {
+    private static final String prefix = "Agatha, 鲜血のアガサ ---- ";
+
     public static void i(String tag, String msg) {
         if (Config.debug)
-            Log.i(tag, msg);
+            Log.i(prefix + tag, msg);
     }
 
-    public static void e(String tag, String msg){
-        if(Config.debug)
-            Log.e(tag, msg);
+    public static void e(String tag, String msg) {
+        if (Config.debug)
+            Log.e(prefix + tag, msg);
     }
 
-    public static void d(String tag, String msg){
-        if(Config.debug)
-            Log.d(tag, msg);
+    public static void d(String tag, String msg) {
+        if (Config.debug)
+            Log.d(prefix + tag, msg);
     }
 
-    public static void v(String tag, String msg){
-        if(Config.debug)
-            Log.v(tag, msg);
+    public static void v(String tag, String msg) {
+        if (Config.debug)
+            Log.v(prefix + tag, msg);
     }
 }

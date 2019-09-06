@@ -12,11 +12,11 @@ import com.jascal.kernel.AppRuntime;
 public class AgathaApplication extends Application {
 
     public AgathaApplication() {
-        AppRuntime.init(this);
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
+        AppRuntime.init(getApplicationContext());
     }
 }
