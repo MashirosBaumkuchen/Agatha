@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.jascal.agatha.R;
 import com.jascal.kernel.base.BaseActivity;
+import com.jascal.kernel.listener.OnTransitionEndListener;
 import com.jascal.kernel.log.LogUtils;
 
 /**
@@ -83,30 +84,10 @@ public class LoginActivity extends BaseActivity {
     private void addTransitionListener() {
         transition = getWindow().getSharedElementEnterTransition();
         if (transition != null) {
-            transition.addListener(new Transition.TransitionListener() {
-                @Override
-                public void onTransitionStart(Transition transition) {
-
-                }
-
+            transition.addListener(new OnTransitionEndListener() {
                 @Override
                 public void onTransitionEnd(Transition transition) {
                     transition.removeListener(this);
-                }
-
-                @Override
-                public void onTransitionCancel(Transition transition) {
-
-                }
-
-                @Override
-                public void onTransitionPause(Transition transition) {
-
-                }
-
-                @Override
-                public void onTransitionResume(Transition transition) {
-
                 }
             });
         }
